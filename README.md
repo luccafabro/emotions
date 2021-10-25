@@ -1,7 +1,16 @@
 # emotions
-Protótipo:  https://www.figma.com/proto/6oH0QwsrH8DqdjHeoePHlw/emotions?node-id=7%3A20&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=7%3A20
+Sua **saúde emocional** em primeiro lugar
 
-# Checkist
+# emotions - propósito
+criar um ambiente seguro em que pessoas possam contar suas experiências de forma anônima e também testar o que funcionou para outros usuários para que você tenha uma saude mental cada vez melhor
+
+# wireframe
+https://www.figma.com/proto/6oH0QwsrH8DqdjHeoePHlw/emotions?node-id=7%3A20&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=7%3A20
+
+# intuito do projeto
+projeto da matéria desenvolvimento web II
+
+# checkist
 
 Caixas de Diálogo
 
