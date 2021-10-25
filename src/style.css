@@ -73,13 +73,13 @@ body {
     #btn-login {
         color: white;
         background: #FE0066;
-        float: left;
+        float: right;
     }
     
     #btn-cadastro {
         color: #FE0066;
         background: #989898;
-        float: right;
+        float: left;
     }
 
     #botoes {
