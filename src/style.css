@@ -1,3 +1,9 @@
+/*
+
+  Escurecer mais as imagens
+
+*/
+
 html {
   font-family: "Montserrat", sans-serif;
 }
@@ -57,6 +63,12 @@ body {
     position: relative;
     padding: 5rem 0 0 0;
   }
+
+  #input-login {
+    max-width: 600px;
+    padding: 0 35px;
+    margin: 0 auto;
+  }
 }
 
 /* Desktop */
@@ -70,6 +82,7 @@ body {
     border: 0;
     font-weight: 300;
     text-align: center;
+    margin-bottom: 4rem;
   }
 
   #btn-login {
@@ -93,6 +106,12 @@ body {
     position: relative;
     padding: 5rem 0;
   }
+
+  #input-login {
+    max-width: 600px;
+    padding: 0 75px;
+    margin: 0 auto;
+  }
 }
 
 #btn-login:hover,
@@ -100,13 +119,6 @@ body {
   cursor: pointer;
   transform: scale(1.2);
   transition: 0.3s ease-in-out;
-}
-
-
-#input-login {
-    max-width: 600px;
-    padding: 0 75px;
-    margin: 0 auto;
 }
 
 #h1-login {
@@ -131,6 +143,7 @@ body {
     color: #fe0066;
     box-shadow: -15px 15px #414141;
     font-family: "Montserrat", sans-serif;
+    margin-bottom: 4rem;
 }
 
 #btn-enjoy:hover {
@@ -203,4 +216,44 @@ Input
 .input-field input[type="password"]:focus {
     border-bottom: 2px solid #fe0066 !important;
     box-shadow: 0 0px 0 0 #fe0066 !important;
+}
+
+
+/* Cadastro */
+.cadastro-esquerdo #h1-login {
+  padding: 3rem 0;
+  font-size: 3rem;
+}
+
+#frase {
+  color: white;
+  font-weight: 300;
+  padding: 3rem 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* Desktop */
+@media only screen and (min-width: 768px) {
+  .cadastro-direito {
+    float: right;
+    width: 45%;
+    margin-left: 5%;
+    height: max-content;
+    background-color: rgba(0, 0, 0, 0.356);
+  }
+  
+  .cadastro-esquerdo {
+    float: left;
+    width: 45%;
+    margin-right: 5%;
+  }
+}
+
+/* Celular */
+@media only screen and (max-width: 768px) {
+  .cadastro-direito {
+    height: max-content;
+    background-color: rgba(0, 0, 0, 0.356);
+  }
 }
