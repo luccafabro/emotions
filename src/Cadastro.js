@@ -2,25 +2,40 @@ bd = localStorage;
 var btnCadastro = document.querySelector("#btn-enjoy");
 
 btnCadastro.onclick = function () {
-  let login = document.getElementById("input-email").value
-  let password = document.getElementById("input-senha").value;
-  let about = document.getElementById("input-sobre").value
-  let picture = document.getElementById("input-foto").value
-
-  validaLogin(login);
-  validaSenha(password);
-  validaFoto(picture);
-
-  if (validaFoto || validaLogin || validaSenha) {
-      localStorage.setItem("cadastro", {
-          "user": login,
-          "senha": password,
-          "sobre" : about,
-          "foto" : picture
-      })
-      console.log('Inserido com sucesso')
+  if (bd.getItem("contador") == null) {
+    bd.setItem("contador", "1");
   }
-};
+  let login = document.getElementById("input-email").value;
+  let password = document.getElementById("input-senha").value;
+  let about = document.getElementById("input-sobre").value;
+  let picture = document.getElementById("input-foto").value;
+
+  if (!validaSenha(password)) {
+    alertify.error('Informe uma senha coerente com as regras')
+  }
+
+  if (!validaLogin(login)) {
+      alertify.error('Seu usuário deve conter pelo menos 5 caracteres')
+  }
+
+  if (validaFoto(picture) && validaLogin(login) && validaSenha(password)) {
+    console.log(login);
+    console.log(password);
+    console.log(about);
+    console.log(picture);
+    localStorage.setItem(
+      `cadastro_${valorContador()}`,
+      JSON.stringify({
+        nome: login,
+        senha: password,
+        sobre: about,
+        foto: picture,
+      })
+    );
+    acrescentaUm()
+    alertify.success(`Cadastro conclúido, você será rediciona a página inicial`)
+  }
+}
 
 function validaSenha(str) {
   aux = str.replace(/[^\w\-]+/g, "");
@@ -28,6 +43,10 @@ function validaSenha(str) {
   hasUpperCase = 0;
   hasNumber = 0;
   hasSpecial = 0;
+
+  if (str.length < 8) {
+    return false
+  }
 
   if (aux.length < str.length) {
     hasSpecial++;
@@ -60,5 +79,18 @@ function validaLogin(str) {
 }
 
 function validaFoto(url) {
-    return true
+  return true;
+}
+
+
+acrescentaUm = () => {
+    let contador = bd.getItem("contador")
+    contador = Number(contador)
+
+    bd.setItem("contador", `${contador+1}`)
+}
+
+valorContador = () => {
+    let contador = bd.getItem("contador")
+    return Number(contador)
 }
