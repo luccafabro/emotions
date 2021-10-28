@@ -1,5 +1,5 @@
 bd = localStorage;
-var btnCadastro = document.querySelector("#btn-enjoy");
+var btnCadastro = document.querySelector(".cadastro");
 
 btnCadastro.onclick = function () {
   if (bd.getItem("contador") == null) {
@@ -11,7 +11,7 @@ btnCadastro.onclick = function () {
   let picture = document.getElementById("input-foto").value;
 
   if (!validaSenha(password)) {
-    alertify.error('Informe uma senha coerente com as regras')
+    alertify.error('Senha, pelo menos 8 caracteres, dentre eles 1 caractere especial, 1 letra maiscúla, 1 letra minuscúla')
   }
 
   if (!validaLogin(login)) {
@@ -34,6 +34,9 @@ btnCadastro.onclick = function () {
     );
     acrescentaUm()
     alertify.success(`Cadastro conclúido, você será rediciona a página inicial`)
+    redireciona(
+      'login.html'
+    )
   }
 }
 
@@ -93,4 +96,13 @@ acrescentaUm = () => {
 valorContador = () => {
     let contador = bd.getItem("contador")
     return Number(contador)
+}
+
+function redireciona (url) {
+  await new Promise(r => setTimeout(r, 2500));
+  setTimeout(function(){ 
+    document.querySelector('body').style.opacity='0';
+  }, 2000)
+
+  window.location.href = url
 }
