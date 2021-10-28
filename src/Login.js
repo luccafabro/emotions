@@ -6,9 +6,13 @@ btnLogin.onclick = function () {
   let passwd = document.getElementById("input-senha").value;
 
   if (!validacaoInicial(login, passwd)) {
-    alertify.error("Por favor insira dados válidos");
+    alertify.error("Por favor insira credenciais válidas")
   } else {
-    verificaCredenciais(login, passwd);
+    if (verificaCredenciais(login, passwd)) {
+      alertify.success("Seja bem-vindo(a) novamente")
+    } else {
+      alertify.error("Por favor insira credenciais válidas")
+    }
   }
 };
 
@@ -19,7 +23,6 @@ verificaCredenciais = (login, senha) => {
       objeto = JSON.parse(eCadastro);
       
       if (objeto.nome == login && objeto.senha == senha) {
-          alertify.success("Seja bem-vindo(a) novamente")
           return true
       }
     }

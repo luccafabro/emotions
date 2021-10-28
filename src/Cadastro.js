@@ -98,7 +98,7 @@ valorContador = () => {
     return Number(contador)
 }
 
-function redireciona (url) {
+async function redireciona (url) {
   await new Promise(r => setTimeout(r, 2500));
   setTimeout(function(){ 
     document.querySelector('body').style.opacity='0';
