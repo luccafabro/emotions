@@ -10,6 +10,7 @@ btnLogin.onclick = function () {
   } else {
     if (verificaCredenciais(login, passwd)) {
       alertify.success("Seja bem-vindo(a) novamente")
+      redireciona('feed.html')
     } else {
       alertify.error("Por favor insira credenciais válidas")
     }
@@ -23,6 +24,7 @@ verificaCredenciais = (login, senha) => {
       objeto = JSON.parse(eCadastro);
       
       if (objeto.nome == login && objeto.senha == senha) {
+          fazerLogin(objeto)
           return true
       }
     }
@@ -37,3 +39,23 @@ validacaoInicial = (login, senha) => {
     return true;
   }
 };
+
+function fazerLogin(objeto) {
+  if (bd.getItem(`logado`) != null) {
+    bd.removeItem(`logado`)
+  }
+
+  bd.setItem(
+    `logado`,
+    JSON.stringify(objeto)
+  );
+}
+
+async function redireciona (url) {
+  await new Promise(r => setTimeout(r, 2500));
+  setTimeout(function(){ 
+    document.querySelector('body').style.opacity='0';
+  }, 2000)
+
+  window.location.href = url
+}

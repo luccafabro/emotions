@@ -23,7 +23,7 @@ btnCadastro.onclick = function () {
     console.log(password);
     console.log(about);
     console.log(picture);
-    localStorage.setItem(
+    bd.setItem(
       `cadastro_${valorContador()}`,
       JSON.stringify({
         nome: login,

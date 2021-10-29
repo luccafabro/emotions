@@ -283,3 +283,26 @@ Home
   text-align: center;
   margin: 0 auto;
 }
+
+#experiencias {
+  width: 55%;
+  float: left;
+}
+
+#funcionou-comigo {
+  width: 25%;
+  float: left;
+}
+
+#meu-perfil {
+  width: 20%;
+  float: left;
+}
+
+#espaco-usuario img {
+  display: flex;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  border-radius: 100%;
+}
