@@ -251,3 +251,35 @@ Input
     background-color: rgba(0, 0, 0, 0.356);
   }
 }
+
+/*
+
+Home
+
+*/
+
+.home {
+  background-color: black;
+  display: flex;
+}
+
+#e-logo-right,
+#e-logo-left {
+  padding: 0 1rem;
+  font-size: 3rem;
+}
+
+#e-logo-right {
+  float: right;
+}
+
+#e-logo-left {
+  float: left;
+}
+
+#emotions-logo {
+  font-size: 3rem;
+  color: #fe0066;
+  text-align: center;
+  margin: 0 auto;
+}
