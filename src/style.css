@@ -116,53 +116,53 @@ body {
 }
 
 #h1-login {
-    max-width: 600px;
-    padding: 7rem 0;
-    text-align: center;
-    margin: 0 auto;
+  max-width: 600px;
+  padding: 7rem 0;
+  text-align: center;
+  margin: 0 auto;
 }
 
 #h1-login span {
-    color: #fe0066;
+  color: #fe0066;
 }
 
 #btn-enjoy {
-    display: block;
-    margin: 0 auto;
-    width: 222px;
-    height: 122px;
-    border: 0;
-    background: #989898;
-    font-size: 2.75rem;
-    color: #fe0066;
-    box-shadow: -15px 15px #414141;
-    font-family: "Montserrat", sans-serif;
-    margin-bottom: 4rem;
+  display: block;
+  margin: 0 auto;
+  width: 222px;
+  height: 122px;
+  border: 0;
+  background: #989898;
+  font-size: 2.75rem;
+  color: #fe0066;
+  box-shadow: -15px 15px #414141;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 4rem;
 }
 
 #btn-enjoy:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-    transition: 0.3s ease-in-out;
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
 }
 
 .botao-login {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 /*
 Input
 */
 .input-field {
-    width: 100%;
-    margin: 2rem 0;
-    border-color: black;
-    border-top: 1px solid black;
+  width: 100%;
+  margin: 2rem 0;
+  border-color: black;
+  border-top: 1px solid black;
 }
 
 .input-field ::placeholder {
-    text-align: center;
+  text-align: center;
 }
 /* label color */
 .input-field label {
@@ -196,22 +196,21 @@ Input
 /* label focus color */
 .input-field input[type="text"],
 .input-field input[type="password"] {
-    border-bottom: 1px solid #000;
-    text-align: center;
-    color: #fe0066;
+  border-bottom: 1px solid #000;
+  text-align: center;
+  color: #fe0066;
 }
 
 .input-field input[type="text"]:focus + label,
 .input-field input[type="password"]:focus + label {
-    color: #fe0066 !important;
+  color: #fe0066 !important;
 }
 
 .input-field input[type="text"]:focus,
 .input-field input[type="password"]:focus {
-    border-bottom: 2px solid #fe0066 !important;
-    box-shadow: 0 0px 0 0 #fe0066 !important;
+  border-bottom: 2px solid #fe0066 !important;
+  box-shadow: 0 0px 0 0 #fe0066 !important;
 }
-
 
 /* Cadastro */
 .cadastro-esquerdo #h1-login {
@@ -236,7 +235,7 @@ Input
     height: max-content;
     background-color: rgba(0, 0, 0, 0.356);
   }
-  
+
   .cadastro-esquerdo {
     float: left;
     width: 45%;
@@ -303,6 +302,109 @@ Home
   display: flex;
   width: 120px;
   height: 120px;
-  margin: 0 auto;
+  margin: 2rem auto;
   border-radius: 100%;
+  box-shadow: 8px -8px 1px #fe0066;
+}
+
+#espaco-usuario h2 {
+  text-align: center;
+  font-size: 36px;
+  line-height: 44px;
+  text-align: center;
+  color: #000000;
+}
+
+#experiencias {
+  background-color: #c4c4c4;
+}
+
+#header-ex {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 59px;
+  text-align: center;
+  color: #000000;
+  padding-bottom: 2rem;
+  border-bottom: 3px solid black;
+}
+
+#rosa {
+  color: #fe0066;
+  font-size: 64px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#funcionou-comigo {
+  background: #414141;
+}
+
+#header-fc {
+  margin: 1.8rem 0 1.68rem 0;
+  text-align: center;
+  font-size: 36px;
+  line-height: 44px;
+  color: white;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
+    0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#azul-esquerdo {
+  position: relative;
+  left: 25px;
+  text-align: left;
+  color: #0bd3ff;
+  text-shadow: none;
+}
+
+#esquerdo-form-ex {
+  text-align: left;
+  padding: 1rem 3rem;
+}
+
+#modo-anonimo {
+  color: black;
+}
+
+#modo-anonimo p {
+  float: left;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 500;
+}
+
+#btn-on-ff {
+  display: flex;
+  float: left;
+  margin-left: 18px;
+}
+
+#on {
+  line-height: 30px;
+  text-align: center;
+  background: #42e85c;
+  width: 35px;
+  height: 30px;
+}
+
+#off {
+  line-height: 30px;
+  text-align: center;
+  background: #de3232;
+  width: 35px;
+  height: 30px;
+}
+
+#bola-e {
+  font-size: 2.5rem;
+  text-align: center;
+  line-height: 50px;
+  float: right;
+  border-radius: 50%;
+  display: block;
+  height: 60px;
+  width: 60px;
+  background-color: #414141;
+  color: white;
+  box-shadow: 6px -6px 1px #fe0066;
 }
