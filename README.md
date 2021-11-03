@@ -1,6 +1,9 @@
 # emotions
 Sua **saúde emocional** em primeiro lugar
 
+# acesse agora
+https://luccafabro.github.io/emotions/
+
 # emotions - propósito
 criar um ambiente seguro em que pessoas possam contar suas experiências de forma anônima e também testar o que funcionou para outros usuários para que você tenha uma saude mental cada vez melhor
 
