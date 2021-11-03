@@ -408,3 +408,99 @@ Home
   color: white;
   box-shadow: 6px -6px 1px #fe0066;
 }
+
+#baixo-form-ex {
+  padding-top: 3rem;
+  padding-left: 3rem;
+}
+
+#experiencia-input {
+  font-family: "Montserrat", sans-serif;
+  resize: none;
+  padding: 10px;
+  color: white;
+  margin: 0 auto;
+  min-height: 100px;
+  box-shadow: 4px 4px #fe0066;
+  max-width: 50%;
+  background-color: #414141;
+}
+
+#experiencia-input::placeholder {
+  color: white;
+}
+
+#area-publicar {
+  margin: 0 auto;
+}
+
+#btn-publicar {
+  position: relative;
+  top: -35px;
+  left: -50px;
+  float: right;
+  border: 0px;
+  width: 95px;
+  height: 35px;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  background-color: black;
+  box-shadow: 5px -5px #414141;
+  cursor: pointer;
+}
+
+#btn-publicar:hover {
+  background-color: #414141;
+  box-shadow: 5px -5px black;
+}
+
+#cima-form-fc {
+  padding: 20px;
+  height: 120px;
+}
+
+#cima-form-fc p {
+  float: left;
+  width: 30%;
+  color: white;
+  text-align: center;
+  font-size: 110%;
+}
+
+#fc-input {
+  padding: 10px;
+  float: right;
+  max-width: 65%;
+  margin-left: 5%;
+  height: 75px;
+  background-color: white;
+  box-shadow: 5px -5px #0BD3FF;
+  resize: none;
+}
+
+#baixo-form-fc #modo-anonimo {
+  font-weight: normal;
+  color: white;
+  float: right;
+}
+#baixo-form-fc #modo-anonimo p {
+  font-weight: normal;
+}
+
+#modo-anonimo #on {
+  float: left;
+  margin: 0 15px;
+}
+
+#baixo-form-fc button {
+  font-weight: 500;
+  float: none;
+  position: initial;
+  width: 110px;
+  height: 25px;
+  color: black;
+  background-color: white;
+  box-shadow: 5px -5px #0BD3FF;
+  text-align: center;
+  margin: 0.5rem 2rem;
+}
