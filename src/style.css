@@ -504,3 +504,35 @@ Home
   text-align: center;
   margin: 0.5rem 2rem;
 }
+
+#baixo-form-fc button:hover {
+  background-color: #0BD3FF;
+  box-shadow: 5px -5px white;
+  color: white;
+}
+
+#baixo-perfil {
+  background-color: #000000a1;
+  padding: 1rem;
+}
+
+#funcionalidades .funcao {
+  box-shadow: 2px 2px 3px;
+  font-size: 1.1rem;
+  padding: 1rem;
+  margin: 1rem auto;
+  background-color: #c4c4c4;
+  text-align: center;
+}
+
+#ver-perfil:hover {
+  color: #0BD3FF;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.50);
+}
+
+#sobre:hover {
+  color: #fe0066;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.50);
+}
