@@ -1,46 +1,8 @@
 bd = localStorage;
 var btnCadastro = document.querySelector(".cadastro");
+contadorAlerta = 0
 
-btnCadastro.onclick = function () {
-  if (bd.getItem("contador") == null) {
-    bd.setItem("contador", "1");
-  }
-  let login = document.getElementById("input-email").value;
-  let password = document.getElementById("input-senha").value;
-  let about = document.getElementById("input-sobre").value;
-  let picture = document.getElementById("input-foto").value;
-
-  if (!validaSenha(password)) {
-    alertify.error('Senha, pelo menos 8 caracteres, dentre eles 1 caractere especial, 1 letra maiscúla, 1 letra minuscúla')
-  }
-
-  if (!validaLogin(login)) {
-      alertify.error('Seu usuário deve conter pelo menos 5 caracteres')
-  }
-
-  if (validaFoto(picture) && validaLogin(login) && validaSenha(password)) {
-    console.log(login);
-    console.log(password);
-    console.log(about);
-    console.log(picture);
-    bd.setItem(
-      `cadastro_${valorContador()}`,
-      JSON.stringify({
-        nome: login,
-        senha: password,
-        sobre: about,
-        foto: picture,
-      })
-    );
-    acrescentaUm()
-    alertify.success(`Cadastro conclúido, você será rediciona a página inicial`)
-    redireciona(
-      'login.html'
-    )
-  }
-}
-
-function validaSenha(str) {
+validaSenha = function(str) {
   aux = str.replace(/[^\w\-]+/g, "");
   hasLowerCase = 0;
   hasUpperCase = 0;
@@ -66,7 +28,7 @@ function validaSenha(str) {
     }
   }
 
-  if (hasLowerCase > 0 || hasUpperCase > 0 || hasNumber > 0 || hasSpecial > 0) {
+  if (hasLowerCase > 0 && hasUpperCase > 0 && hasNumber > 0 && hasSpecial > 0) {
     return true;
   } else {
     return false;
@@ -97,6 +59,58 @@ valorContador = () => {
     let contador = bd.getItem("contador")
     return Number(contador)
 }
+
+btnCadastro.onclick = function () {
+  if (bd.getItem("contador") == null) {
+    bd.setItem("contador", "1");
+  }
+  let login = document.getElementById("input-email").value;
+  let password = document.getElementById("input-senha").value;
+  let about = document.getElementById("input-sobre").value;
+  let picture = document.getElementById("input-foto").value;
+
+  if (!validaSenha(password)) {
+    alertify.error('Senha, pelo menos 8 caracteres, dentre eles 1 caractere especial, 1 letra maiscúla, 1 letra minuscúla')
+  }
+
+  if (!validaLogin(login)) {
+      alertify.error('Seu usuário deve conter pelo menos 5 caracteres')
+  }
+
+  if (validaFoto(picture) && validaLogin(login) && validaSenha(password)) {
+    bd.setItem(
+      `cadastro_${valorContador()}`,
+      JSON.stringify({
+        nome: login,
+        senha: password,
+        sobre: about,
+        foto: picture,
+      })
+    );
+    acrescentaUm()
+    alertify.success(`Cadastro conclúido, você será rediciona a página inicial`)
+    redireciona(
+      'login.html'
+    )
+  }
+}
+
+document.getElementById("input-senha").addEventListener('keypress', function(e) {
+  var requisitoEspecial = 0
+  var requisitoNumero = 0
+
+  if (e.charCode > 32 && e.charCode < 48 || 
+    e.charCode > 57 && e.charCode < 65) {
+    requisitoEspecial += 1
+  } else if (e.charCode > 47 && e.charCode < 58) {
+    requisitoNumero += 1
+  }
+
+  if (requisitoEspecial > 0 && requisitoEspecial > 0 && contadorAlerta == 0) {
+    alertify.success(`Parabéns sua senha já contém pelo menos um carácter especial e um número`)
+    contadorAlerta += 1
+  }
+})
 
 async function redireciona (url) {
   await new Promise(r => setTimeout(r, 2500));

@@ -1,6 +1,6 @@
 let time = 4000,
     currentImageIndex = 0,
-    images = document.querySelectorAll("body")
+    images = document.getElementsByTagName("body")
     max = 3;
 
 function nextImage() {
@@ -23,4 +23,6 @@ function start() {
     }, time)
 }
 
-window.addEventListener("load", start)
+window.onload = function() {
+    this.start()
+}

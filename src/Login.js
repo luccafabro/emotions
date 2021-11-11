@@ -3,7 +3,7 @@ var btnLogin = document.querySelector("#btn-enjoy");
 
 btnLogin.onclick = function () {
   let login = document.getElementById("input-email").value;
-  let passwd = document.getElementById("input-senha").value;
+  let passwd = document.getElementsByName("campo-senha")[0].value;
 
   if (!validacaoInicial(login, passwd)) {
     alertify.error("Por favor insira credenciais válidas")
