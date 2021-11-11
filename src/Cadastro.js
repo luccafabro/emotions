@@ -78,14 +78,11 @@ btnCadastro.onclick = function () {
   }
 
   if (validaFoto(picture) && validaLogin(login) && validaSenha(password)) {
+    let aux = new Conta(login, password, about, picture)
+    console.log(password)
     bd.setItem(
       `cadastro_${valorContador()}`,
-      JSON.stringify({
-        nome: login,
-        senha: password,
-        sobre: about,
-        foto: picture,
-      })
+      JSON.stringify(aux)
     );
     acrescentaUm()
     alertify.success(`Cadastro conclúido, você será rediciona a página inicial`)
@@ -107,6 +104,7 @@ document.getElementById("input-senha").addEventListener('keypress', function(e) 
   }
 
   if (requisitoEspecial > 0 && requisitoEspecial > 0 && contadorAlerta == 0) {
+    alertify.set('notifier','position', 'top-right')
     alertify.success(`Parabéns sua senha já contém pelo menos um carácter especial e um número`)
     contadorAlerta += 1
   }
@@ -119,4 +117,24 @@ async function redireciona (url) {
   }, 2000)
 
   window.location.href = url
+}
+
+function padronizarLoginLower() {
+  let campoLogin = document.getElementById("input-email")
+  campoLogin.value = campoLogin.value.toLowerCase()
+  campoLogin.style.backgroundColor = "#00000000"
+}
+
+function deixarFundoVerde() {
+  var password = document.getElementById("input-senha")
+
+  password.addEventListener('keypress', function() {
+    if (validaSenha(password.value)) {
+      password.style.backgroundColor = "#00ff7217"
+    }
+  })
+}
+
+function voltarAoNormal() {
+  document.getElementById("input-senha").style.backgroundColor = "#00000000"
 }

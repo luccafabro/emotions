@@ -80,10 +80,10 @@
         </header>
         <main id="input-login">
             <div class="input-field col s6">
-                <input placeholder="digite seu usuário" id="input-email" type="text" class="validate">
+                <input onblur="padronizarLoginLower()" placeholder="digite seu usuário" id="input-email" type="text" class="validate">
                 <label for="email">login</label>
             <div class="input-field col s6">
-                <input placeholder="digite sua senha" id="input-senha" type="password" class="validate">
+                <input onblur="voltarAoNormal()" onfocus="deixarFundoVerde()" placeholder="digite sua senha" id="input-senha" type="password" class="validate">
                 <label for="senha">senha</label>
             </div>
             <div class="input-field col s6">
@@ -101,6 +101,8 @@
         </main>
     </div>
     <!--JavaScript at end of body for optimized loading-->
+    <script src="
+    src/Conta.js"></script>
     <script src="
     src/Cadastro.js"></script>
     <!-- JavaScript AlerifyJs -->
