@@ -17,7 +17,7 @@ projeto da matéria desenvolvimento web II
 
 Caixas de Diálogo
 
-- [ x ] prompt
+- [x] prompt
 - [ x ] alert
 - [ x ] confirm
 
