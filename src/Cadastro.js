@@ -60,6 +60,14 @@ valorContador = () => {
     return Number(contador)
 }
 
+document.getElementById('input-foto').onmouseup = function(e) {
+  alertify.set('notifier','position', 'top-right');
+  if (e.isTrusted) {
+    alertify.success('Já verificamos e você não é um robo!').dismissOthers()
+  }
+  alertify.message('insira um link da sua foto, use cloudinary ou google drive')
+}
+
 btnCadastro.onclick = function () {
   if (bd.getItem("contador") == null) {
     bd.setItem("contador", "1");
