@@ -104,10 +104,8 @@ function gerarPostagensExperiencias() {
 mudarCorLogo = (color) => {
   var corLogo = document.getElementById('emotions-logo')
   if (color == 'rgb(254, 0, 102)') {
-    console.log ('para azul')
     corLogo.style.color = "#0bd3ff"
   } else {
-    console.log('para rosa')
     corLogo.style.color = "rgb(254, 0, 102)"
   }
 }
