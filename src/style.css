@@ -386,6 +386,8 @@ Home
   background: #42e85c;
   width: 35px;
   height: 30px;
+  opacity: 1;
+  cursor: pointer;
 }
 
 #off {
@@ -394,6 +396,8 @@ Home
   background: #de3232;
   width: 35px;
   height: 30px;
+  opacity: 0.5;
+  cursor: pointer;
 }
 
 #bola-e {

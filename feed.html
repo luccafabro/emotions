@@ -70,8 +70,8 @@
                   anônimo
                 </p>
                 <div id="btn-on-ff">
-                  <div id="on">on</div>
-                  <div id="off">off</div>
+                  <div class="ex-on" onclick="ativar()" value="Ativo" id="on">on</div>
+                  <div class="ex-off" onclick="desativar()" value="null" id="off">off</div>
                 </div>
               </div>
               <div id="bola-e">e</div>
@@ -84,7 +84,7 @@
               name="experiencia"
             ></textarea>
             <div id="area-publicar">
-              <button id="btn-publicar" type="submit">publicar</button>
+              <button class="ex-pub" id="btn-publicar" type="submit">publicar</button>
             </div>
           </div>
         </div>
@@ -254,5 +254,6 @@
     ></script>
     <script src="src/Perfil.js"></script>
     <script src="src/Feed.js"></script>
+    <script src="src/Publicacoes.js"></script>
   </body>
 </html>
