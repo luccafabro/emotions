@@ -13,6 +13,10 @@ function Experiencia(texto, modo) {
   this.modo = modo;
 }
 
+window.onload = function () {
+  gerarPostagensExperiencias();
+};
+
 document.querySelector(".ex-pub#btn-publicar").onclick = function () {
   var campoEx = document.getElementById("experiencia-input");
   let on = document.querySelector(".ex-on#on").getAttribute("value");
@@ -23,31 +27,49 @@ document.querySelector(".ex-pub#btn-publicar").onclick = function () {
   }
 
   let aux = new Experiencia(campoEx.value, modo);
-  armazenaExperiencia(aux)
+  armazenaExperiencia(aux);
+  gerarPostagensExperiencias()
 };
 
 function armazenaExperiencia(experiencia) {
-    if (localStorage.getItem('EX-post') == null) {
-        postagensExperiencias = {
-            postagens : []
-        }
+  if (localStorage.getItem("EX-post") == null) {
+    postagensExperiencias = {
+      postagens: [],
+    };
 
-        postagensExperiencias.postagens.push(experiencia)
-        localStorage.setItem(
-            'EX-post', JSON.stringify(postagensExperiencias)
-        )
-    } else {
-        let auxPost = JSON.parse(localStorage.getItem('EX-post'))
-        localStorage.removeItem('EX-post')
+    postagensExperiencias.postagens.push(experiencia);
+    localStorage.setItem("EX-post", JSON.stringify(postagensExperiencias));
+  } else {
+    let auxPost = JSON.parse(localStorage.getItem("EX-post"));
+    localStorage.removeItem("EX-post");
 
-        if (auxPost.postagens.length > 3) {
-            auxPost.postagens.shift()
-        }
-        auxPost.postagens.push(experiencia)
-        localStorage.setItem(
-            'EX-post', JSON.stringify(auxPost)
-        )
+    if (auxPost.postagens.length > 3) {
+      auxPost.postagens.shift();
     }
+    auxPost.postagens.push(experiencia);
+    localStorage.setItem("EX-post", JSON.stringify(auxPost));
+  }
+}
+
+function gerarPostagensExperiencias() {
+  var postagens = JSON.parse(localStorage.getItem("EX-post")).postagens;
+  document.getElementById("postagens-ex").innerHTML = ''
+  postagens.reverse()
+  for (var i = 0; i < postagens.length; i++) {
+    document.getElementById("postagens-ex").innerHTML += `
+        <div id="postagem-ex">
+        <div id="cima-post-ex">
+          <img src="${postagens[i].foto}" alt="postagem foto pessoa" id="img-post-ex">
+          ${postagens[i].usuario}
+        </div>
+        <div id="baixo-post-ex">
+          <p>
+            ${postagens[i].texto}
+          </p>
+        </div>
+      </div>
+        `;
+  }
 }
 
 ativar = () => {
