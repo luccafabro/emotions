@@ -1,24 +1,3 @@
-/*function FuncionouComigo(texto) {
-  this.texto = texto
-}*/
-
-/*
-function Experiencia(texto, modo) {
-  let user, foto;
-  modo
-    ? (user = "anônimo")
-    : (user = JSON.parse(localStorage.getItem("logado")).nome);
-  modo
-    ? (foto =
-        "https://res.cloudinary.com/lucca221/image/upload/v1636720119/crumpled-black-paper-texture_pywxnk.jpg")
-    : (foto = JSON.parse(localStorage.getItem("logado")).foto);
-  this.usuario = user;
-  this.foto = foto;
-  this.texto = texto;
-  this.modo = modo;
-}
-*/
-
 class FuncionouComigo {
   constructor(texto) {
     this.texto = texto
