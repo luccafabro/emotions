@@ -79,25 +79,27 @@
             </h1>
         </header>
         <main id="input-login">
+          <form action="#" onsubmit="validaTudo()">
             <div class="input-field col s6">
-                <input onblur="padronizarLoginLower()" placeholder="digite seu usuário" id="input-email" type="text" class="validate">
+                <input max="20" pattern="[a-zA-Z0-9]+" onblur="padronizarLoginLower()" placeholder="digite seu usuário" id="input-email" type="text" class="validate">
                 <label for="email">login</label>
             <div class="input-field col s6">
                 <input onblur="voltarAoNormal()" onfocus="deixarFundoVerde()" placeholder="digite sua senha" id="input-senha" type="password" class="validate">
                 <label for="senha">senha</label>
             </div>
             <div class="input-field col s6">
-                <input placeholder="conte sobre você" id="input-sobre" type="text" class="validate">
+                <input onchange="limparMensagemDeAlerta()" placeholder="conte sobre você" id="input-sobre" type="text" class="validate" required>
                 <label for="sobre">sobre</label>
             <div class="input-field col s6">
-                <input placeholder="link da sua foto" id="input-foto" type="text" class="validate">
+                <input placeholder="link da sua foto" id="input-foto" type="url" class="validate" required>
                 <label for="foto">foto</label>
             </div>
             <div class="botao-login">
-                <button class="cadastro" type="submit" id="btn-enjoy">
+                  <input value="enjoy" class="cadastro" type="submit" id="btn-enjoy">
                     enjoy
                 </button>
             </div>
+          </form>
         </main>
     </div>
     <!--JavaScript at end of body for optimized loading-->
