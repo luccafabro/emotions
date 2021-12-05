@@ -5,9 +5,9 @@ let time = 4000,
 
 function nextImage() {
     images = [
-        "src/banner/1.jpg",
-        "src/banner/2.jpg",
-        "src/banner/3.jpg"
+        "assets/resources/images/banner/1.jpg",
+        "assets/resources/images/banner/2.jpg",
+        "assets/resources/images/banner/3.jpg"
     ]
     currentImageIndex++
 
