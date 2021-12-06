@@ -1,4 +1,4 @@
-const campoSobre = document.getElementById('input-sobre');
+const campoSobre = document.forms[0].elements[2];
 let contadorAlerta = 0;
 
 let validaSenha = function(str) {
