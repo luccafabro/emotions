@@ -1,6 +1,7 @@
 # Avaliação 2
 Link do video: https://drive.google.com/file/d/1QWXEcgChyjuJbEEDALvP_MpVexUOtObE/view?usp=sharing
 O vídeo está com um chiado em alguns momentos do vídeo, não sei o motivo
+Se caso for necessário visualizar o vídeo em maior qualidade, me informar pelo email, que farei o envio do video em HD
 
 # emotions
 Sua **saúde emocional** em primeiro lugar
