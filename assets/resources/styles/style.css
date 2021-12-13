@@ -647,6 +647,7 @@ Home
 }
 
 #bloco-postagem-fc {
+  width: 100%;
   padding: 1rem 0;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
@@ -682,4 +683,23 @@ Home
   cursor: pointer;
   color: white;
   box-shadow: -8px -8px white; 
+}
+
+/* Celular */
+@media only screen and (max-width: 768px) {
+  #experiencias {
+    width: 100% !important;
+  }
+
+  #funcionou-comigo {
+    width: 100% !important;
+  }
+
+  #meu-perfil {
+    width: 100% !important;
+  }
+}
+
+.tamanho-postagens {
+  width: 100% !important;
 }
